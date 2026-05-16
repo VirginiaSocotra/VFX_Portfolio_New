@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ccf30e458034fabafb103dcddf02cd, type: 3}
+  m_Name: Demo_MagicImpact
+  m_EditorClassIdentifier: 
+  title: Magic Impact
+  description: Magical impact effect featuring layered particles, glow, and bloom-friendly
+    shapes. Designed for spell hits and ability feedback.
+  category: Magic & Energy
+  tags:
+  - VFX Graph
+  - Magic
+  - Impact
+  - Lighting
+  - Bloom
+  demoPrefab: {fileID: 8992370519405301498, guid: 3d8f7fb19b53745e6a1dcd76133b1557,
+    type: 3}
+  ambientColor: {r: 0.2, g: 0.22, b: 0.3, a: 1}
+  directionalLightIntensity: 1.2
+  customSkybox: {fileID: 0}
+  enableCameraRotation: 0
+  cameraDistance: 6
+  cameraHeight: 2
+  cameraFOV: 50

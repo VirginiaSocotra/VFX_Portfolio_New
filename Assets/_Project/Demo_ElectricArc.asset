@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ccf30e458034fabafb103dcddf02cd, type: 3}
+  m_Name: Demo_ElectricArc
+  m_EditorClassIdentifier: 
+  title: Electric Arc
+  description: Electric arc effect with animated lightning shapes and additive glow.
+    Can be used for weapons, traps, or sci-fi interactions.
+  category: Sci-Fi
+  tags:
+  - Electric
+  - Lightning
+  - Additive
+  - Sci-Fi
+  - VFX
+  demoPrefab: {fileID: 3943474332033452073, guid: 601804d32833247a5a800c132dda5526,
+    type: 3}
+  ambientColor: {r: 0.2, g: 0.22, b: 0.3, a: 1}
+  directionalLightIntensity: 1.2
+  customSkybox: {fileID: 0}
+  enableCameraRotation: 0
+  cameraDistance: 6
+  cameraHeight: 1.5
+  cameraFOV: 50
