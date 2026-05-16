@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 /// <summary>
 /// Управляет запуском эффектов (Particle System и VFX Graph) по кнопке
@@ -132,15 +133,13 @@ public class VFXEffectController : MonoBehaviour
         }
         
         // Попробовать найти VFX Graph
-#if UNITY_VFX_GRAPH
-        UnityEngine.VFX.VisualEffect vfx = effectObj.GetComponentInChildren<UnityEngine.VFX.VisualEffect>();
+        VisualEffect vfx = effectObj.GetComponentInChildren<VisualEffect>();
         if (vfx != null)
         {
             vfx.Stop();
             vfx.Play();
             return;
         }
-#endif
         
         Debug.LogWarning($"[VFXEffectController] No Particle System or Visual Effect found in: {effectObj.name}");
     }
@@ -187,13 +186,11 @@ public class VFXEffectController : MonoBehaviour
             ps.Stop();
         }
         
-#if UNITY_VFX_GRAPH
-        UnityEngine.VFX.VisualEffect vfx = effectObj.GetComponentInChildren<UnityEngine.VFX.VisualEffect>();
+        VisualEffect vfx = effectObj.GetComponentInChildren<VisualEffect>();
         if (vfx != null)
         {
             vfx.Stop();
         }
-#endif
     }
     
     /// <summary>

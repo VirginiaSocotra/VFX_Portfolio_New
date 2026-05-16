@@ -140,16 +140,12 @@ public class DemoListController : MonoBehaviour
 
         Debug.Log($"[{gameObject.name}] Instance created: {currentInstance.name}");
 
-        // Найти камеру в префабе
+        // Найти камеру в префабе или использовать общую DemoCamera
         currentDemoCamera = currentInstance.GetComponentInChildren<Camera>(true);
         if (currentDemoCamera == null)
         {
-            Debug.LogWarning($"[{gameObject.name}] No camera found in prefab {prefab.name}! Using fallback demo camera.");
-            currentDemoCamera = demoCamera; // Fallback на общую камеру
-        }
-        else
-        {
-            Debug.Log($"[{gameObject.name}] Found camera in prefab: {currentDemoCamera.name}");
+            // Используем общую DemoCamera из сцены (это нормальное поведение)
+            currentDemoCamera = demoCamera;
         }
 
         // Применить настройки окружения из DemoData
