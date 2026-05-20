@@ -16,9 +16,9 @@ MonoBehaviour:
   - title: TRAILS
     position:
       serializedVersion: 2
-      x: -998
+      x: -1057
       y: -383
-      width: 2090
+      width: 2149
       height: 2151
     contents:
     - model: {fileID: 8926484042661614608}
@@ -120,9 +120,9 @@ MonoBehaviour:
   categories: []
   uiBounds:
     serializedVersion: 2
-    x: -998
+    x: -1057
     y: -522
-    width: 5691
+    width: 5750
     height: 2358
 --- !u!114 &114350483966674976
 MonoBehaviour:
@@ -3124,7 +3124,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614741}
   - {fileID: 8926484042661614742}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661614739}
   m_MasterData:
@@ -3318,7 +3318,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661614745}
       inputSlot: {fileID: 8926484042661614739}
-    position: {x: -787, y: 199}
+    position: {x: -666, y: 285}
     expandedSlots: []
     expanded: 0
   - m_Id: 2
@@ -13383,7 +13383,7 @@ MonoBehaviour:
   m_Nodes:
   - m_Id: 0
     linkedSlots: []
-    position: {x: -748, y: 286}
+    position: {x: -1032, y: -226}
     expandedSlots: []
     expanded: 0
 --- !u!114 &8926484042661615343
