@@ -8,6 +8,9 @@ public class DemoData : ScriptableObject
 
     [TextArea(3, 10)]
     public string description;
+    
+    [Tooltip("Preview image for this effect")]
+    public Sprite previewImage;
 
     [Header("Category")]
     public string category; // e.g., "Fire & Smoke", "Magic & Energy", "Impacts", "2D Effects"

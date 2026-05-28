@@ -1,11 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DemoPreviewPanel : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descriptionText;
+    [SerializeField] private Image previewImage;
 
     [Header("Tags")]
     [SerializeField] private Transform tagsWrap;
@@ -17,6 +19,19 @@ public class DemoPreviewPanel : MonoBehaviour
 
         if (titleText) titleText.text = data.title;
         if (descriptionText) descriptionText.text = data.description;
+        
+        if (previewImage)
+        {
+            if (data.previewImage != null)
+            {
+                previewImage.sprite = data.previewImage;
+                previewImage.gameObject.SetActive(true);
+            }
+            else
+            {
+                previewImage.gameObject.SetActive(false);
+            }
+        }
 
         RebuildTags(data.tags);
     }
