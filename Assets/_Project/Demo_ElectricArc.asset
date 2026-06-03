@@ -15,6 +15,7 @@ MonoBehaviour:
   title: Electric Arc
   description: Electric arc effect with animated lightning shapes and additive glow.
     Can be used for weapons, traps, or sci-fi interactions.
+  previewImage: {fileID: 21300000, guid: c888479d5d46a429aaa1c844340e31fb, type: 3}
   category: Sci-Fi
   tags:
   - Electric

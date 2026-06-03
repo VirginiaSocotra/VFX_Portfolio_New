@@ -15,9 +15,18 @@ MonoBehaviour:
   title: 2D Splash
   description: Fast 2D slash effect with additive blending and sharp silhouettes.
     Designed for melee attacks and responsive combat feedback.
+  previewImage: {fileID: 21300000, guid: 8a0c1ad829cec434ab1ccf79e9182bda, type: 3}
   category: 2D Effects
   tags:
   - 2D
   - Slash
   - Sprite
   - Additive
+  demoPrefab: {fileID: 0}
+  ambientColor: {r: 0.2, g: 0.22, b: 0.3, a: 1}
+  directionalLightIntensity: 1.2
+  customSkybox: {fileID: 0}
+  enableCameraRotation: 1
+  cameraDistance: 3.5
+  cameraHeight: 1.5
+  cameraFOV: 50

@@ -15,6 +15,7 @@ MonoBehaviour:
   title: Stylized Fire
   description: Stylized fire effect created in VFX Graph with focus on mobile performance.
     Uses simple noise, color gradients, and soft motion for readability and low cost.
+  previewImage: {fileID: 21300000, guid: fb1729dd99d9b43798c30f0bd510e402, type: 3}
   category: Fire & Smoke
   tags:
   - Particles
@@ -26,6 +27,7 @@ MonoBehaviour:
     type: 3}
   ambientColor: {r: 0.3, g: 0.3, b: 0.35, a: 1}
   directionalLightIntensity: 2.5
+  customSkybox: {fileID: 0}
   enableCameraRotation: 0
   cameraDistance: 6
   cameraHeight: 2

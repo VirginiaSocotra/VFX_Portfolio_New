@@ -15,6 +15,7 @@ MonoBehaviour:
   title: Magic Impact
   description: Magical impact effect featuring layered particles, glow, and bloom-friendly
     shapes. Designed for spell hits and ability feedback.
+  previewImage: {fileID: 21300000, guid: f707294e92b5143fc8589f0378ccc72f, type: 3}
   category: Magic & Energy
   tags:
   - VFX Graph
