@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class FilterController : MonoBehaviour
 {
@@ -42,8 +43,38 @@ public class FilterController : MonoBehaviour
                 item.gameObject.SetActive(matches);
             }
         }
+        
+        // Force layout rebuild in next frame
+        StartCoroutine(RebuildLayoutNextFrame());
 
         Debug.Log($"Filter applied: {currentFilter}");
+    }
+    
+    private IEnumerator RebuildLayoutNextFrame()
+    {
+        // Wait for end of frame to ensure all SetActive calls are processed
+        yield return new WaitForEndOfFrame();
+        
+        if (demoListController == null) yield break;
+        
+        // Get Content RectTransform
+        var demoItems = demoListController.GetComponentsInChildren<DemoItemUI>(true);
+        if (demoItems.Length == 0) yield break;
+        
+        Transform contentTransform = demoItems[0].transform.parent;
+        if (contentTransform == null) yield break;
+        
+        // Force rebuild all parent layouts
+        RectTransform current = contentTransform.GetComponent<RectTransform>();
+        while (current != null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(current);
+            current = current.parent as RectTransform;
+            
+            // Stop at Canvas
+            if (current != null && current.GetComponent<Canvas>() != null)
+                break;
+        }
     }
 
     /// <summary>

@@ -65,6 +65,7 @@ public class DemoListController : MonoBehaviour
                 Debug.LogWarning($"  - Item has NO DATA!");
             }
             local.SetClickHandler(() => Select(local));
+            local.SetHoverHandler(() => ShowPreview(local)); // Обновляем превью при наведении
         }
 
         if (items.Count > 0)
@@ -78,6 +79,20 @@ public class DemoListController : MonoBehaviour
         }
         
         Debug.Log("=== DemoListController Awake END ===");
+    }
+    
+    // Показать превью при наведении
+    private void ShowPreview(DemoItemUI item)
+    {
+        if (item == null || item.Data == null) return;
+        
+        // Обновляем выбранный элемент при наведении
+        if (selected != null) selected.SetSelected(false);
+        selected = item;
+        selected.SetSelected(true);
+        
+        if (previewPanel != null)
+            previewPanel.Show(item.Data);
     }
 
     public void Select(DemoItemUI item)
@@ -97,8 +112,8 @@ public class DemoListController : MonoBehaviour
             Debug.LogError("Selected item has no Data!");
         }
 
-        if (previewPanel != null && selected.Data != null)
-            previewPanel.Show(selected.Data);
+        // Обновляем превью при выборе
+        ShowPreview(selected);
     }
 
     // ✅ ВОТ ЭТО нажимает кнопка Play
