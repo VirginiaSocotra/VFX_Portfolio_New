@@ -23,7 +23,8 @@ MonoBehaviour:
   - Smoke
   - Dust
   - Distortion
-  demoPrefab: {fileID: 0}
+  demoPrefab: {fileID: 8371827364012345678, guid: f5e8a7c9d2b4e6a1f3c8d5b7a9e2c4f1,
+    type: 3}
   ambientColor: {r: 0.2, g: 0.22, b: 0.3, a: 1}
   directionalLightIntensity: 1.2
   customSkybox: {fileID: 0}

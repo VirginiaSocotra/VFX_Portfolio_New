@@ -114,8 +114,8 @@ public class DemoItemUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (background == null) return;
         
-        // Показываем спрайт со свечением ТОЛЬКО при наведении (не при выборе)
-        bool shouldHighlight = isHovered;
+        // Показываем спрайт со свечением при наведении ИЛИ если элемент выбран
+        bool shouldHighlight = isHovered || isSelected;
         
         // Если назначены спрайты - меняем спрайт
         if (normalSprite != null && selectedSprite != null)
