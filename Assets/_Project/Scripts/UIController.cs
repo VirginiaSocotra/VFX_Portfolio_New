@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     // ✅ Показать панель About
     public void ShowAbout()
     {
+        Debug.Log("ShowAbout called!"); // Тест
         if (aboutPanel != null)
         {
             bool isActive = aboutPanel.activeSelf;
@@ -51,6 +52,9 @@ public class UIController : MonoBehaviour
     // ✅ Открыть LinkedIn профиль
     public void OpenLinkedIn()
     {
-        Application.OpenURL("https://www.linkedin.com/in/anna-franchuk-246757a3/");
+        Debug.Log("=== LINKEDIN BUTTON CLICKED ===");
+        string url = "https://www.linkedin.com/in/anna-franchuk-246757a3/";
+        Debug.Log($"Opening URL: {url}");
+        Application.OpenURL(url);
     }
 }
